@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+set -eu
+export DESKTOP_SESSION=ps3dee
+export XDG_CURRENT_DESKTOP=PS3DEE
+APP="$HOME/.local/opt/ps3dee/bin/XMS"
+if [ ! -x "$APP" ]; then
+    printf 'PS3DEE session: %s is missing. Run scripts/ps3dee-install.sh first.\n' "$APP" >&2
+    exit 1
+fi
+# Openbox stays underneath the fullscreen dashboard and manages launched apps.
+openbox --sm-disable &
+WM_PID=$!
+trap 'kill "$WM_PID" 2>/dev/null || true' EXIT
+sleep 1
+set +e
+"$APP" "$@"
+APP_STATUS=$?
+set -e
+exit "$APP_STATUS"
