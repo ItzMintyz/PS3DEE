@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=PS3DEE (Preview)
+Comment=Experimental fullscreen XMB-based desktop session
+Exec=/usr/local/bin/ps3dee-session
+TryExec=/usr/local/bin/ps3dee-session
+Type=Application
+DesktopNames=PS3DEE

@@ -6,7 +6,8 @@
 > complete Linux session: boot to dashboard, launch fullscreen applications,
 > and return to the dashboard while keeping controller input consistent.
 >
-> This is still an engineering project, not a finished distribution or installer.
+> This is an engineering preview, not a finished distribution or bootable ISO.
+> A first Ubuntu build-and-launch path is documented in [First Boot Preview](docs/PS3DEE-FIRST-BOOT.md).
 > The original OpenXMB code, name, authorship notices, acknowledgements and
 > licensing information are retained. PS3DEE is an independent community project
 > and is not affiliated with or endorsed by Sony or PlayStation.
