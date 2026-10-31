@@ -14,7 +14,8 @@
 >
 > **PS3DEE project documents:** [Overview](docs/PS3DEE.md) ·
 > [Architecture](docs/PS3DEE-ARCHITECTURE.md) ·
-> [Roadmap](docs/PS3DEE-ROADMAP.md)
+> [Roadmap](docs/PS3DEE-ROADMAP.md) ·
+> [First Boot Preview](docs/PS3DEE-FIRST-BOOT.md)
 >
 > ---
 >

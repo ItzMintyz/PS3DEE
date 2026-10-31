@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-ROOT_DIR="$(cd -- "$(dirname -- "\${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 if [[ "$EUID" -ne 0 ]]; then
     command -v sudo >/dev/null 2>&1 || { echo "sudo is required." >&2; exit 1; }
     exec sudo bash "$0" "$@"
 fi
-REAL_USER="\${SUDO_USER:-}"
+REAL_USER="${SUDO_USER:-}"
 [[ -n "$REAL_USER" && "$REAL_USER" != "root" ]] || {
     echo "Run this with sudo from the desktop user's account, not from a root login." >&2
     exit 1

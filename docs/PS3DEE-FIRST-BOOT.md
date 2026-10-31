@@ -12,11 +12,11 @@ supported by the initial build script.
 
 Open a terminal in Ubuntu and run:
 
-\`\`\`bash
+```bash
 git clone --branch ps3dee/project-foundation https://github.com/ItzMintyz/PS3DEE.git
 cd PS3DEE
 bash scripts/ps3dee-install.sh
-\`\`\`
+```
 
 The installer:
 - Installs the documented Clang 19 / GCC 14, CMake, Vulkan, SDL2, FFmpeg,
@@ -31,18 +31,18 @@ The installer:
 
 Useful alternatives:
 
-\`\`\`bash
+```bash
 bash scripts/ps3dee-install.sh --no-launch
 bash scripts/ps3dee-install.sh --jobs 1
-\`\`\`
+```
 
 ## 2. Add PS3DEE to the login-screen session chooser
 
 After the preview installs successfully, run:
 
-\`\`\`bash
+```bash
 sudo bash scripts/ps3dee-enable-session.sh
-\`\`\`
+```
 
 This installs Xorg and Openbox, then adds PS3DEE (Preview) to
 /usr/share/xsessions. It does not remove GNOME, change the default Ubuntu
@@ -59,17 +59,17 @@ again. The session is X11-only at this stage.
 
 To remove only the PS3DEE login option:
 
-\`\`\`bash
+```bash
 sudo bash scripts/ps3dee-disable-session.sh
-\`\`\`
+```
 
 This leaves Ubuntu, Openbox and Xorg installed.
 
 ## 3. Remove the preview
 
-\`\`\`bash
+```bash
 bash scripts/ps3dee-uninstall.sh
-\`\`\`
+```
 
 This removes only the PS3DEE files installed in the current user's home
 directory. It does not uninstall the build dependencies or delete the source

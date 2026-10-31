@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-ROOT_DIR="$(cd -- "$(dirname -- "\${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 PREFIX="$HOME/.local/opt/ps3dee"
-JOBS="\${PS3DEE_BUILD_JOBS:-2}"
+JOBS="${PS3DEE_BUILD_JOBS:-2}"
 INSTALL_DEPS=1
 ENABLE_SESSION=0
 LAUNCH=1
@@ -36,10 +36,10 @@ done
 [[ -r /etc/os-release ]] || fail "cannot identify this Linux distribution"
 # shellcheck disable=SC1091
 . /etc/os-release
-[[ "\${ID:-}" == "ubuntu" ]] || fail "this first installer currently supports Ubuntu 24.04 and 26.04 only"
-case "\${VERSION_CODENAME:-}" in
+[[ "${ID:-}" == "ubuntu" ]] || fail "this first installer currently supports Ubuntu 24.04 and 26.04 only"
+case "${VERSION_CODENAME:-}" in
     noble|resolute) ;;
-    *) fail "unsupported Ubuntu release '\${VERSION_CODENAME:-unknown}'; use Ubuntu 24.04 LTS or 26.04 LTS" ;;
+    *) fail "unsupported Ubuntu release '${VERSION_CODENAME:-unknown}'; use Ubuntu 24.04 LTS or 26.04 LTS" ;;
 esac
 [[ "$(dpkg --print-architecture)" == "amd64" ]] || fail "the first preview targets 64-bit x86 PCs (amd64)"
 
@@ -76,12 +76,11 @@ GCC14_LIBDIR="/usr/lib/gcc/$GCC14_TRIPLE/14"
 mkdir -p "$PREFIX"
 export CC=clang-19
 export CXX=clang++-19
-export CXXFLAGS="\${CXXFLAGS:+$CXXFLAGS }--gcc-install-dir=$GCC14_LIBDIR"
+export CXXFLAGS="${CXXFLAGS:+$CXXFLAGS }--gcc-install-dir=$GCC14_LIBDIR"
 
 printf '\n[2/5] Configuring the OpenXMB shell...\n'
 cd "$ROOT_DIR"
 cmake --preset default \
-    -DCMAKE_C_COMPILER=clang-19 \
     -DCMAKE_CXX_COMPILER=clang++-19 \
     -DCMAKE_INSTALL_PREFIX="$PREFIX"
 
