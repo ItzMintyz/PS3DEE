@@ -1,3 +1,22 @@
+> **PS3DEE development fork**
+>
+> This repository is the downstream development home for **PS3DEE**, a planned
+> controller-first Linux desktop environment built around the OpenXMB project.
+> The goal is to turn the existing XMB-style shell into the front end of a
+> complete Linux session: boot to dashboard, launch fullscreen applications,
+> and return to the dashboard while keeping controller input consistent.
+>
+> This is still an engineering project, not a finished distribution or installer.
+> The original OpenXMB code, name, authorship notices, acknowledgements and
+> licensing information are retained. PS3DEE is an independent community project
+> and is not affiliated with or endorsed by Sony or PlayStation.
+>
+> **PS3DEE project documents:** [Overview](docs/PS3DEE.md) ·
+> [Architecture](docs/PS3DEE-ARCHITECTURE.md) ·
+> [Roadmap](docs/PS3DEE-ROADMAP.md)
+>
+> ---
+>
 # OpenXMB
 
 <p align="left">
